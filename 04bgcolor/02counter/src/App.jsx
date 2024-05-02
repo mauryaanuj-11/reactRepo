@@ -33,22 +33,16 @@ import './App.css'
 // }
 
 function App(){
-  let [counter,setCounter]=useState(4);   // Here we can define function, object,null value,number etc
+  let [counter,setCounter]=useState(7);   // Here we can define function, object,null value,number etc
 
-  const addValue=function(){
-    
-    setCounter((prevValue)=> prevValue+1)
-    setCounter((prevValue)=> prevValue+1)
-    setCounter(counter => counter+1)
-    setCounter((previourVal)=> { return previourVal+1})
-
-    // console.log("Clicked ", counter);
-    // if(counter>20){
-    //   console.log("You reached your maximum value", counter)
-    // }
-    // else{
-    //   setCounter(counter+1)
-    // }
+  const addValue=()=>{
+    console.log("Clicked ", counter);
+    if(counter>20){
+      console.log("You reached your maximum value", counter)
+    }
+    else{
+      setCounter(counter+1)
+    }
   }
 
   const removeValue=function(){
