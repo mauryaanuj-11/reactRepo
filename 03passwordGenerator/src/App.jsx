@@ -3,13 +3,13 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 
 
 function App() {
-  const [length, setLength] = useState(4)
+  const [length, setLength] = useState(4)    //here we can use any value like object,function,null etc
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState("")
 
   //useRef hook
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null)  
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
@@ -26,12 +26,13 @@ function App() {
     setPassword(pass)
 
 
-  }, [length, numberAllowed, charAllowed, setPassword])
+  }, [length, numberAllowed, charAllowed, setPassword]) // Note : here we use setPassword note password beacuse if we password then it will running infinity and giving the infinity password in the input field.
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 11);
     window.navigator.clipboard.writeText(password)
+    
   }, [password])
 
   useEffect(() => {
@@ -61,7 +62,7 @@ function App() {
         <input 
         type="range"
         min={4}
-        max={44}
+        max={44}  
         value={length}
          className='cursor-pointer'
          onChange={(e) => {setLength(e.target.value)}}
