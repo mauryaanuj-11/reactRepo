@@ -1,7 +1,7 @@
 import React, { createContext } from "react";
 
 
-const userContext = createContext();
+const userContext = createContext(); // In the createContext(), we can use the some values.
 
 export default userContext;
 
