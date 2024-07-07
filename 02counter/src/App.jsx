@@ -38,7 +38,7 @@ function App(){
     setCounter((prevValue)=> prevValue+1)
     setCounter((prevValue)=> prevValue+1)
     setCounter(counter => counter+1)
-    setCounter((previourVal)=> { return previourVal+1})
+    setCounter((previourVal)=> { return previourVal+1}) // here return is used for the function
 
     // console.log("Clicked ", counter);
     // if(counter>20){
@@ -62,7 +62,7 @@ function App(){
     <h2>Counter {counter}</h2>
     <button onClick={addValue}>Add counter {counter}</button> <br/>
     <button onClick={removeValue}>Remove counter {counter}</button><br/>
-    <p>Footer : {counter}</p>
+    <p>Footer : {counter}</p> 
     </>
   )
 }
