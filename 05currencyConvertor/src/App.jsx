@@ -8,7 +8,7 @@ function App() {
     const [to , setTo]  = useState("inr");
     const [convertAmount , setConvertAmount]   =  useState();
 
-    const currencyInfo=useCurrencyInfo(from);
+    const currencyInfo = useCurrencyInfo(from);
     const options=Object.keys(currencyInfo);
 
     const convert = function() {
